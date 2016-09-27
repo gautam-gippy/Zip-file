@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  i_reg_no: MyString
+  original_language: 1
+  billing: 
+  i_reg_date: MyString
+  exp_date: MyString
+
+two:
+  i_reg_no: MyString
+  original_language: 1
+  billing: 
+  i_reg_date: MyString
+  exp_date: MyString
