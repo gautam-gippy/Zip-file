@@ -1,0 +1,2 @@
+class HoldersDetail < ApplicationRecord
+end

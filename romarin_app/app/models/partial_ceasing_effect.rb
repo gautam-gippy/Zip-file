@@ -1,0 +1,2 @@
+class PartialCeasingEffect < ApplicationRecord
+end

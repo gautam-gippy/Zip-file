@@ -1,0 +1,2 @@
+class Cen < ApplicationRecord
+end

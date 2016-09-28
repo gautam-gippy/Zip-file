@@ -1,0 +1,2 @@
+class CancelOfLicense < ApplicationRecord
+end

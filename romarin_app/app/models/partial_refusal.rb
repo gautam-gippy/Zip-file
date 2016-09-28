@@ -1,0 +1,2 @@
+class PartialRefusal < ApplicationRecord
+end

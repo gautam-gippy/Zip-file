@@ -1,0 +1,2 @@
+class BasicAppDetail < ApplicationRecord
+end

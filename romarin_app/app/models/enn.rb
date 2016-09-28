@@ -1,0 +1,2 @@
+class Enn < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ReqForReviewLapsed < ApplicationRecord
+end

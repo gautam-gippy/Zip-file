@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doc_id: MyString
+  gaz_no: MyString
+  int_off: MyString
+  not_date: MyString
+  o_gaz_no: MyString
+  o_pub_date: MyString
+  pub_date: MyString
+  eff_reg_date: MyString
+  rec_reg_date: MyString
+
+two:
+  doc_id: MyString
+  gaz_no: MyString
+  int_off: MyString
+  not_date: MyString
+  o_gaz_no: MyString
+  o_pub_date: MyString
+  pub_date: MyString
+  eff_reg_date: MyString
+  rec_reg_date: MyString

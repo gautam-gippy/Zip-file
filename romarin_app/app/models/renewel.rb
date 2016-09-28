@@ -1,0 +1,2 @@
+class Renewel < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class TotalInvalidation < ApplicationRecord
+end

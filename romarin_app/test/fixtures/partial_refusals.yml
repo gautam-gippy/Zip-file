@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  int_office: MyString
+  eff_reg_date: MyString
+  rec_reg_date: MyString
+  original_language: MyString
+  good_and_service_limited_to: MyString
+
+two:
+  int_office: MyString
+  eff_reg_date: MyString
+  rec_reg_date: MyString
+  original_language: MyString
+  good_and_service_limited_to: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eff_reg_date: MyString
+  rec_reg_date: MyString
+  not_date: MyString
+  gaz_no: MyString
+  pub_date: MyString
+  desig_u_agree: MyString
+
+two:
+  eff_reg_date: MyString
+  rec_reg_date: MyString
+  not_date: MyString
+  gaz_no: MyString
+  pub_date: MyString
+  desig_u_agree: MyString
