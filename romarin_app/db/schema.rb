@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928142037) do
+ActiveRecord::Schema.define(version: 20160930114943) do
 
   create_table "basic_app_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "goods_and_service_eng"
-    t.string   "goods_and_service_fr"
-    t.string   "goods_and_service_"
+    t.text     "goods_and_service_eng",    limit: 65535
+    t.text     "goods_and_service_fr",     limit: 65535
+    t.text     "goods_and_service_",       limit: 65535
     t.string   "reg_date"
     t.string   "reg_no"
     t.string   "desig_under_prot"
     t.string   "desig_under_prot_9sexies"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "cancel_of_licenses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 20160928142037) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "color"
-    t.string   "type"
+    t.string   "image_type"
     t.string   "name"
     t.string   "text"
     t.datetime "created_at", null: false
@@ -247,6 +247,32 @@ ActiveRecord::Schema.define(version: 20160928142037) do
     t.string   "rec_reg_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "statuses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "all_goods_and_ser_indi"
+    t.string   "lice_all_desig_parties"
+    t.string   "doc_id"
+    t.string   "gaz_no"
+    t.string   "int_off"
+    t.string   "lic_type"
+    t.string   "not_date"
+    t.string   "o_gaz_no"
+    t.string   "o_pub_date"
+    t.string   "orig_lan"
+    t.string   "pub_date"
+    t.string   "opp_end_date"
+    t.string   "opp_start_date"
+    t.string   "hol_reff"
+    t.string   "off_ref"
+    t.string   "final"
+    t.string   "desig_un_proto"
+    t.string   "desig_u_proto_9sexies"
+    t.string   "desig_contract_par_code"
+    t.string   "eff_reg_date"
+    t.string   "rec_reg_date"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "total_ceasing_effects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
