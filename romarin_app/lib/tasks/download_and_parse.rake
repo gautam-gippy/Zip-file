@@ -17,19 +17,19 @@ namespace :download_and_parse do
   
   c_dir = File.join(File.dirname(File.dirname(__FILE__)), '')
   y = FileUtils.mkdir_p("#{c_dir}Images").to_sentence
-	#ftp.getbinaryfile(cdate,"#{y}/#{cdate}",1024)
-	ftp.getbinaryfile('20160727.zip',"#{y}/20160727.zip",1024)
+	ftp.getbinaryfile(cdate,"#{y}/#{cdate}",1024)
+	
 
-  #Zip::File.open("#{y}/#{cdate}") do |zip_file|
-  Zip::File.open("#{y}/20160727.zip") do |zip_file|
+  Zip::File.open("#{y}/#{cdate}") do |zip_file|
+  
     zip_file.each do |f|
       fpath = File.join("#{y}", f.name)
       zip_file.extract(f, fpath) unless File.exist?(fpath)
     end
   end
     	
-  #xmls = "#{c_date}".gsub('/','') 
-  xmls = "20160727"
+  xmls = "#{c_date}".gsub('/','') 
+  
   doc = Nokogiri::XML(open("#{y}/#{xmls}.xml"))
 	events = doc.css('ROMARIN MARKGR')
 
