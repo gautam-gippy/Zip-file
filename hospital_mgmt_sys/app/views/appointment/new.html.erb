@@ -1,0 +1,10 @@
+<%= form_for :appoints do |f| %>
+	<strong>Select area of treatment : </strong>
+	
+	<% options = options_from_collection_for_select(@all_records, "id", "speciality") %>
+	<%= f.select :all_val,  options %><br/><br/><br/><br/>
+	
+	<strong> Description   :   </strong><%= text_area :desc, size: "60x12" %> 
+
+	
+<% end %>
