@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  patient_id: 1
-  doctor_id: 1
+  specialization: MyString
   desc: MyText
+  level: 1
 
 two:
-  patient_id: 1
-  doctor_id: 1
+  specialization: MyString
   desc: MyText
+  level: 1

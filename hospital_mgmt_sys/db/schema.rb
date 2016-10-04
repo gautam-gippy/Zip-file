@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003095658) do
+ActiveRecord::Schema.define(version: 20161004111108) do
 
   create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "patient_name"
-    t.string   "doctor_name"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.text     "desc",         limit: 65535
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.text     "desc",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "doctors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 20161003095658) do
     t.string   "speciality"
     t.string   "education"
     t.integer  "experience"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "expertizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "doctor_id"
+    t.integer  "spl_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,8 +54,17 @@ ActiveRecord::Schema.define(version: 20161003095658) do
     t.string   "name"
     t.string   "phone_no"
     t.string   "address"
+    t.boolean  "admin"
     t.index ["email"], name: "index_patients_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "specializations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "specialization"
+    t.text     "desc",           limit: 65535
+    t.integer  "level"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end

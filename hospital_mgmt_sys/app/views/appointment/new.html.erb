@@ -1,10 +1,12 @@
-<%= form_for :appoints do |f| %>
+<%= form_for :appoint do |f| %>
 	<strong>Select area of treatment : </strong>
 	
-	<% options = options_from_collection_for_select(@all_records, "id", "speciality") %>
-	<%= f.select :all_val,  options %><br/><br/><br/><br/>
 	
-	<strong> Description   :   </strong><%= text_area :desc, size: "60x12" %> 
 
+	<strong>Select doctor : </strong>
+	<%= f.collection_select(:doctor_id, @all_records, :id, :name) %><br/><br/><br/><br/>
+	
+	<strong> Description   :   </strong><%= f.text_area :desc, size: "60x12" %> <br/><br/><br/><br/>
+	<%= f.submit "Make Request" %>
 	
 <% end %>
