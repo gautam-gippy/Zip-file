@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: "patient#index"
   get 'new_appointment', to: "appointment#new"
   post 'new_appointment', to: "appointment#create"
+  get 'new_doctor', to: "doctor#new"
+  post 'new_doctor', to: "doctor#create"
 end
