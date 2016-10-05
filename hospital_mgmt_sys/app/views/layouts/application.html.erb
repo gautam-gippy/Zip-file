@@ -15,6 +15,7 @@
       <%= link_to "Sign out", destroy_patient_session_path, :method => :delete %> <br/>
       <% if current_patient.admin? %>
         <%= link_to "Add New Doctor", new_doctor_path %>
+        <%= link_to "View all Doctors", index_doctor_path %>
       <% else %>
         <%= link_to "Request for appointment", new_appointment_path %>
       <% end %>
